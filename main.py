@@ -3,9 +3,9 @@ import shutil
 
 
 # function to move files to the respective folders:
-def move(file_type, file_name,  folder_name):
-    source_path = os.path.join(path, file_name)
-    destination_path = os.path.join(path, folder_name, file_name)
+def move(file_type, folder_name):
+    source_path = os.path.join(path, file)
+    destination_path = os.path.join(path, folder_name, file)
     if not os.path.exists(destination_path):
         try:
             shutil.move(source_path, destination_path)
@@ -36,21 +36,22 @@ for folder in folders_name_list:
 for file in contents:
     # moving text files to Notepad(text)
     if ".txt" in file:
-        move(".txt", file, "Notepad(text)")
+        move(".txt", "Notepad(text)")
 
     # moving .exe files to '.exe files'
-    if ".exe" in file:
-        move(".exe", file, ".exe files")
+    elif ".exe" in file:
+        move(".exe", ".exe files")
 
     # moving .html files to html
-    if ".html" in file:
-        move(".html", file, "html")
+    elif ".html" in file:
+        move(".html","html")
 
     # moving .pdf files to pdf:
-    if ".pdf" in file:
-        move(".txt", file, "pdf")
+    elif ".pdf" in file:
+        move(".txt", "pdf")
 
     # moving .png files to images:
-    if ".png" in file:
-        move(".png", file, "images")
+    elif ".png" in file:
+        move(".png", "images")
+
 
