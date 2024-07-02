@@ -47,7 +47,7 @@ for file in contents:
         move(".pdf", file, "pdf")
 
     # moving .png files to images:
-    if ".png" in file:
+    elif ".png" in file:
         move(".png", file, "images")
     # moving .docx files to 'Ms-word files'
     elif ".docx" in file:
