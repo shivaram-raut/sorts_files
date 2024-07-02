@@ -24,7 +24,6 @@ def move(file_type, file_name,  folder_name):
 
 
 # specifying the name of the directory to be sorted:
-# path = "C:\\Users\\Acer\\Desktop\\Questions\\"
 path = input("Enter the path ::")
 
 # making  list of files and folders which are inside  the directory pointed by the path.
