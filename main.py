@@ -23,7 +23,7 @@ def move(file_type, file_name,  folder_name):
             print(f"An error occurred: {e}")
 
 
-# specifying the name of the directory to be sorted:
+# specify the name of the directory to be sorted:
 path = input("Enter the path ::")
 
 # making  list of files and folders which are inside  the directory pointed by the path.
@@ -35,21 +35,21 @@ for file in contents:
         move(".txt", file, "Notepad(text)")
 
     # moving .exe files to '.exe files'
-    if ".exe" in file:
+    elif ".exe" in file:
         move(".exe", file, ".exe files")
 
     # moving .html files to html
-    if ".html" in file:
+    elif ".html" in file:
         move(".html", file, "html")
 
     # moving .pdf files to pdf:
-    if ".pdf" in file:
+    elif ".pdf" in file:
         move(".pdf", file, "pdf")
 
     # moving .png files to images:
     if ".png" in file:
         move(".png", file, "images")
     # moving .docx files to 'Ms-word files'
-    if ".docx" in file:
+    elif ".docx" in file:
         move(".docx", file,"Ms-word files")
 
